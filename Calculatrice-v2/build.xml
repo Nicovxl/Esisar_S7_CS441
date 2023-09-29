@@ -1,0 +1,33 @@
+<project name = "Calculatrice-v2" basedir="." default="run">
+	<property name = "srcdir" value="src"/>
+	<property name = "buildir" value="build"/>
+	<property name = "classdir" value="${buildir}/classes"/>
+	<property name = "jardir" value="${buildir}/jar"/>
+	<property name = "javadocdir" value="${buildir}/javadoc"/>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${classdir}"/>
+		<javac srcdir="${srcdir}" destdir="${classdir}" includeantruntime="false"/>
+
+	</target>
+
+	 <target name="doc" depends="compile" description="generate documentation">
+	 	<mkdir dir="${javadocdir}"/>
+	    <javadoc sourcepath="${srcdir}" destdir="${javadocdir}"/>
+	  </target>
+	
+	<target name = "package" depends="doc">
+		<mkdir dir = "build/jar"/>
+		<jar destfile = "${jardir}/${ant.project.name}.0.jar" basedir="${classdir}">
+			<manifest>
+				<attribute name="Main-Class" value="fr.esisar.calculatrice.Calculateur"/>
+			</manifest>
+		</jar>
+	</target>
+	<target name = "run" depends="package">
+		<java jar="${jardir}/${ant.project.name}.0.jar" fork ="true"/>
+	</target>
+	<target name ="clean">
+		<delete dir = "${buildir}"/>
+	</target>
+</project>
