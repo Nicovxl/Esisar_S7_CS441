@@ -51,19 +51,19 @@ public class Calculatrice {
 	 * @return Retourne le résultat de l'opération si cette dernière a pu être calculée
 	 * @throws CalculatriceException "OperationInvalide" si l'opération n'existe pas ou si il y a division par zéro
 	 */
-	public Double calculer(String nom, Double operande1, Double operande2) throws CalculatriceException {
+	public Double calculer(String nom, Double... operandes) throws CalculatriceException {
 
 		Operation op = chercherOperation(nom);
 
 		try {
 			
-			if(op.getNom()=="/" && operande2 == 0) {
+			if(op.getNom()=="/" && operandes[1] == 0) {
 				
 			throw new CalculatriceException("OperationInvalide\n");	
 				
 			}
 			
-			return (op.calculer(operande1, operande2));
+			return (op.calculer(operandes));
 
 		}
 

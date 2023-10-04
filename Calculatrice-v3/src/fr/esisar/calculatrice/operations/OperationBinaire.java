@@ -1,13 +1,22 @@
 package fr.esisar.calculatrice.operations;
 
-public abstract class OperationBinaire implements Operation{
+import fr.esisar.calculatrice.CalculatriceException;
 
-	protected Double doCalculer(Double operande1, Double operande2) {
-		
-		
-		
-		
+
+/**
+ * Gère les différentes oprérations binaires possibles.
+ */
+
+public abstract class OperationBinaire implements Operation {
+
+	@Override
+	public Double calculer(Double... operandes) throws CalculatriceException{
+		if(operandes.length != 2) {
+			
+			throw new CalculatriceException("NombreOpérandesInsuffisant");
+		}
+		return doCalculer(operandes[0], operandes[1]);
 	}
-	
-	
+
+	protected abstract Double doCalculer(Double operande1, Double operande2);
 }

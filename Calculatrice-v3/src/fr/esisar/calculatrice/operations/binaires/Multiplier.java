@@ -1,9 +1,8 @@
 package fr.esisar.calculatrice.operations.binaires;
 
-import fr.esisar.calculatrice.operations.Operation;
+import fr.esisar.calculatrice.operations.OperationBinaire;
 
-public class Multiplier implements Operation{
-
+public class Multiplier extends OperationBinaire {
 	
 	
 	/**
@@ -14,15 +13,13 @@ public class Multiplier implements Operation{
 		return "*";
 	}
 	
+	
 	/**
 	 * Calcule la multiplication entre deux opérandes de type double 
 	 */
 	@Override
-	public Double calculer(Double operande1, Double operande2) {
-		
-		return operande1 * operande2;
-		
-		
+	protected Double doCalculer(Double operande1, Double operande2) {
+		return operande1*operande2;
 	}
 
 }
