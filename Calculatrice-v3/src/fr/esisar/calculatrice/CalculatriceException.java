@@ -18,7 +18,7 @@ public class CalculatriceException extends Exception {
 
 	@Override
 	public String toString() {
-		return "CalculatriceException [message=" + message + "]";
+		return "CalculatriceException : " + message;
 	}
 
 }

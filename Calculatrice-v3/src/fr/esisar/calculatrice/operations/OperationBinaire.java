@@ -18,5 +18,5 @@ public abstract class OperationBinaire implements Operation {
 		return doCalculer(operandes[0], operandes[1]);
 	}
 
-	protected abstract Double doCalculer(Double operande1, Double operande2);
+	protected abstract Double doCalculer(Double operande1, Double operande2) throws CalculatriceException;
 }

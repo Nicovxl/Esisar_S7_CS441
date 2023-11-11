@@ -55,24 +55,10 @@ public class Calculatrice {
 
 		Operation op = chercherOperation(nom);
 
-		try {
-			
-			if(op.getNom()=="/" && operandes[1] == 0) {
-				
-			throw new CalculatriceException("OperationInvalide\n");	
-				
-			}
+		if(op == null) throw new CalculatriceException("OperationInvalide\n");
 			
 			return (op.calculer(operandes));
 
-		}
-
-		catch (Exception e) {
-
-			System.out.println("OperationInvalide\n");
-			return null;
-
-		}
 
 	}
 	

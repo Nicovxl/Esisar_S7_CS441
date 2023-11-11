@@ -6,5 +6,24 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-5.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-api-5.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-engine-5.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-migrationsupport-5.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-jupiter-params-5.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-commons-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-console-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-console-standalone-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-engine-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-jfr-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-launcher-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-reporting-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-runner-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-suite-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-suite-api-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-suite-commons-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-suite-engine-1.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-platform-testkit-1.10.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
